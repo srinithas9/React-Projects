@@ -1,6 +1,6 @@
 // routes/tasks.js
 const express = require("express");
-const pool = require("../db"); // make sure db.js is correctly configured
+const pool = require("../db"); 
 const router = express.Router();
 
 // Get all tasks for a user
@@ -33,7 +33,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-// Update task (toggle complete)
+// Update task
 router.put("/:id", async (req, res) => {
   const { id } = req.params;
   const { isComplete } = req.body;

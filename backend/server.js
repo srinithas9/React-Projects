@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ---------------- SIGNUP ----------------
+
 app.post("/api/auth/signup", async (req, res) => {
   const { username, email, password } = req.body;
 
@@ -31,7 +31,7 @@ app.post("/api/auth/signup", async (req, res) => {
   }
 });
 
-// ---------------- LOGIN ----------------
+
 app.post("/api/auth/login", async (req, res) => {
   const { email, password } = req.body;
 
@@ -55,7 +55,7 @@ app.post("/api/auth/login", async (req, res) => {
   }
 });
 
-// ---------------- TODO ROUTES ----------------
+
 app.get("/api/todos/:userId", async (req, res) => {
   const { userId } = req.params;
   try {
@@ -109,6 +109,6 @@ app.delete("/api/todos/:id", async (req, res) => {
   }
 });
 
-// ---------------- START SERVER ----------------
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));

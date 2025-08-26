@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import ToDoItem from "./ToDOItems";
 import { useNavigate } from "react-router-dom";
+import ToDoItem from "./ToDoItem";
+
+
 
 function ToDo({ userId }) {
   const [todos, setTodos] = useState([]);

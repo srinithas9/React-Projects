@@ -19,7 +19,7 @@ function Login({ setUserId }) {
 
       if (!res.ok) throw new Error(data.message || "Login failed");
 
-      setUserId(data.id); // pass userId to App
+      setUserId(data.id); 
       navigate("/todo");
     } catch (err) {
       console.error("Login error:", err);
